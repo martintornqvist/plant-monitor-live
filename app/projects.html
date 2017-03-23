@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>#chili2017</title>
+     <meta name="Online plant monitor" content="Online plant monitor">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+<body onload="tempTimeout()">
+<div id="whole-page">
+  <div id="loader"></div>
+
+  <div id="wrapper" class="fadeIn">
+
+    <div class="light-block">
+      <div class="light-block-icon">
+        <div class="light-block-image"></div>
+      </div>
+      <div class="light-block-text">
+        <h3>Light</h3>
+        <br />
+        We're having a blast!
+        <br />
+        Current LUX level: {lux.level}
+
+        <br />
+        <br />
+        It's a bit dark in here...
+        <br />
+        Current LUX level: {lux.level}
+      </div>
+    </div>
+
+    <div class="moisture-block">
+      <div class="moisture-block-icon">
+        <div class="moisture-block-image"></div>
+      </div>
+      <div class="moisture-block-text">
+        <h3>Moisture</h3>
+        <br />
+        It's alright, we're doing just fine.
+        <br />
+        Current moisture level: {moist.level}
+
+        <br />
+        <br />
+        Hello, some water please!
+        <br />
+        Current moisture level: {moist.level}
+      </div>
+    </div>
+
+    <div class="temp-block">
+      <div class="temp-block-icon">
+        <div class="temp-block-image"></div>
+      </div>
+      <div class="temp-block-text">
+        <h3>Temperature</h3>
+        <br />
+        Warm and cozy, just as we want it.
+        <br />
+        Current temperature level: {temp.level}
+
+        <br />
+        <br />
+        Brr, we're freezing!
+        <br />
+        Current temperature level: {temp.level}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="scripts/scripts.js"></script>
+</body>
+</html>

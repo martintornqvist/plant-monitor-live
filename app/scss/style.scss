@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+$font-small:0.8em;
+$font-medium:1em;
+$font-large:1.2em;
+
+$color-dark: #323c59;
+$color-medium: #5f486e;
+$color-light: #e6dcdf;
+
+$trans-slow: 0.5s;
+
+$padding: 10px;
+
+// GENERAL STYLING
+html, body {
+  padding:0;
+  margin:0;
+  height:100vh;
+  width:100vw;
+  font-family:'Lato', sans-serif;
+}
+body {
+  background-color:black;
+  color:white;
+  h3 {
+    margin:0;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  #whole-page {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+  }
+}
+
+
+// PRELOADER WHILE FETCHING DATA
+#loader {
+  border:16px solid #f3f3f3;
+  border-top:16px solid #3498db;
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  animation:spin 2s linear infinite;
+  margin:0 auto;
+}
+// WRAPPER FOR ALL CONTENT
+#wrapper {
+  width:50%;
+  height:60%;
+  margin:0 auto;
+  display:none;
+
+  // BLOCK FOR DISPLAYING LIGHT
+  .light-block {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    width:100%;
+    background-color:$color-light;
+    height:20%;
+    transition-duration:$trans-slow;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    font-size:$font-large;
+    &:hover {
+      transition-duration:$trans-slow;
+      height:60%;
+    }
+    .light-block-icon {
+      padding:$padding;
+      .light-block-image {
+        background-image:url(../images/002-sun.png);
+        height:128px;
+        width:128px;
+        animation:spin 5s linear infinite;
+      }
+    }
+    .light-block-text {
+      display:inline-block;
+      width:50%;
+      //border:1px solid black;
+      padding:$padding;
+      font-size:$font-small;
+    }
+  }
+
+  // BLOCK FOR DISPLAYING MOISTURE
+  .moisture-block {
+    width:100%;
+    background-color:$color-medium;
+    height:20%;
+    transition-duration:$trans-slow;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    font-size:$font-large;
+    &:hover {
+      transition-duration:$trans-slow;
+      height:60%;
+    }
+    .moisture-block-icon {
+      padding:$padding;
+      .moisture-block-image {
+        background-image:url(../images/001-weather-1.png);
+        height:128px;
+        width:128px;
+      }
+    }
+    .moisture-block-text {
+      display:inline-block;
+      width:50%;
+      //border:1px solid black;
+      padding:$padding;
+      font-size:$font-small;
+    }
+  }
+
+  // BLOCK FOR DISPLAYING TEMPERATURE
+  .temp-block {
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    width:100%;
+    background-color:$color-dark;
+    height:20%;
+    transition-duration:$trans-slow;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    font-size:$font-large;
+    &:hover {
+      transition-duration:$trans-slow;
+      height:60%;
+    }
+    .temp-block-icon {
+      padding:$padding;
+      margin-left:10px;
+      .temp-block-image {
+        background-image:url(../images/004-temperature.png);
+        height:128px;
+        width:128px;
+      }
+    }
+    .temp-block-text {
+      display:inline-block;
+      width:50%;
+      //border:1px solid black;
+      padding:$padding;
+      font-size:$font-small;
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1.2s;
+  animation-name: fadeIn;
+  animation-duration: 1.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
