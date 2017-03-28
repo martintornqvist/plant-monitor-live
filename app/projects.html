@@ -13,7 +13,13 @@
  </head>
 <body onload="tempTimeout()">
 <div id="whole-page">
-  <div id="loader"></div>
+  <div id="loading-text">
+    <p>
+      Fetching latest data...
+        <div id="signal"></div>
+    </p>
+  </div>
+
 
   <div id="wrapper" class="fadeIn">
 
@@ -27,7 +33,6 @@
         We're having a blast!
         <br />
         Current LUX level: {lux.level}
-
         <br />
         <br />
         It's a bit dark in here...
@@ -46,7 +51,6 @@
         It's alright, we're doing just fine.
         <br />
         Current moisture level: {moist.level}
-
         <br />
         <br />
         Hello, some water please!
@@ -65,7 +69,6 @@
         Warm and cozy, just as we want it.
         <br />
         Current temperature level: {temp.level}
-
         <br />
         <br />
         Brr, we're freezing!

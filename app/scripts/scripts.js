@@ -6,7 +6,7 @@ function tempTimeout(){
 }
 
 function showPage(){
-  document.getElementById('loader').style.display = 'none';
+  document.getElementById('loading-text').style.display = 'none';
   console.log('showing after 1s');
   document.getElementById('wrapper').style.display = 'block';
   document.body.style.background = 'white';
